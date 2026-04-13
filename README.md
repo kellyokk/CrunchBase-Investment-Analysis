@@ -1,11 +1,9 @@
 # CrunchBase-Investment-Analysis
-This project demonstrates end-to-end data analysis on the Crunchbase startup investment dataset 
-The analysis is conducted entirely in Python with SQLite.
-The dataset, crunchbase_investments.csv, is a flat file export from Crunchbase containing records of startup funding rounds. Each row represents a single investment event between an investor and a company.
+This project is a venture capital analytics system built using Python, SQL, and data visualization tools (including Streamlit) to analyze over 50,000 startup investment records from Crunchbase. The goal was to understand how funding flows across startups, investors, stages, and geography.
 
-This analysis surfaces several meaningful insights from the Crunchbase dataset while building a foundation for deeper investigation:
-- Biotech is the single largest recipient of venture capital by dollar volume ($110B+), while Software leads in deal frequency, highlighting a distinction between capital intensive and volume driven sectors.
-- Startup funding activity peaked in Quarter 2; 2008 and rebounded strongly post 2009, with deal volume nearly doubling from 2010 to 2013.
-- Top-tier investors like NEA and Sequoia maintain diversified portfolios of 200+ companies, with clear sector specialisations that can be extracted programmatically using window functions.
-- Approximately 30% of seed funded companies do not appear in Series C+ records, suggesting a meaningful attrition rate across the startup lifecycle.
-- Data quality is a material concern: 95% missing rates in investor_category_code render it unusable, and non-random missingness in raised_amount_usd requires careful handling in funding analyses.
+I broke the analysis into four main parts: funding trends over time, investor behavior, startup funding funnels, and geographic clustering. I also built a data quality audit to assess missing values, duplicates, and potential bias in the dataset.
+
+The key output was an interactive dashboard showing investor rankings, funding stage drop-off rates, and regional funding concentration. One of the most interesting findings was that funding significantly drops between Seed and Series A, and that capital is heavily concentrated in a small group of top investors, especially in the San Francisco Bay Area.
+
+The main problem was understanding how venture capital is distributed across startups and identifying patterns in investor behavior, funding progression, and geographic concentration.
+The dataset is large and unstructured, so I also needed to clean and validate it before drawing insights. This allowed me to simulate a real-world investment intelligence system similar to what VC firms use to track market activity.
